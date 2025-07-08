@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  background: #f8f9fa;
+  font-family: lato;
+  font-size: .9rem;
+  padding: 0;
+  margin: 0;
+}
+
+.sudo-body {
+  background: #f8f9fa;
+  display: flex;
+  gap: 5%;
+  padding: 2.5rem 1rem;
+}
+
+i {
+  font-size: 2rem;
+  color: gold;
+}
+
+h1, h2, h3 {
+  font-family: jost;
+}
+
+a:link,
+a:visited {
+  margin: 0;
+  text-decoration: none;
+  color: #543452;
+  font-family: dm sans;
+  font-weight: 900;
+  font-size: 1.15rem;
+}
+
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  /* gap: 50px; */
+  align-items: center;
+  background-color: black;
+  padding: 0;
+}
+.main-logo-container {
+  /* border: 1px solid red; */
+  width: 25%;
+  margin: 0;
+  padding: .8rem 0 .4rem 0;
+}
+.main-logo {
+  width: 130px;
+  margin-left: 1rem;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+
+.main-nav {
+  font-family: oswald;
+  font-size: 1.1rem;
+  letter-spacing: .02rem;
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  color: gold;
+  /* border: 1px solid red; */
+  list-style-type: none;
+}
+.nav-link, .nav-link:visited {
+  text-decoration: none;
+  color: gold;
+}
+.contact-section {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+.contacts {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 1.75rem;
+  padding-left: 7rem;  
+}
+
+.contact {
+  display: flex;
+  gap: .5rem;
+}
+
+.icon-cont {
+  background-color: #000000;
+  border: 1px solid gold;
+  width: 100px;
+  height: 100px;
+  border-radius: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0;
+  margin: 0;
+  margin-top: .75rem;
+}
+
+.contact-title {
+  margin: 0;
+  font-family: montserrat;
+  font-weight: 700;
+  color: rgb(161, 134, 0);
+  margin-bottom: -.25rem;
+}
+
+@media (max-width: 480px) {
+  a:link,
+  a:visited {
+    margin: 0;
+    text-decoration: none;
+    color: #543452;
+    font-family: dm sans;
+    font-weight: 900;
+    font-size: 1rem;
+    text-align: center;
+  }
+  i {
+    font-size: 1rem;
+    color: gold;
+  }
+  .sudo-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  } 
+  .contact-section {
+    width: 95%;
+    padding: .5rem;
+    margin: 0 1rem;
+  }
+  .contacts {
+    width: 97%;
+    gap: 3rem;
+    padding: 1rem .5rem;
+    margin: 0;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+  }
+  .icon-cont {
+    background-color: #000000;
+    border: 1px solid gold;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-title {
+    text-align: center;
+  }
+  .contact-info1 {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 70px; /* adjust depending on your header height */
+    right: 0;
+    background-color: black;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-header {
+    position: relative;
+    padding: 0.5rem 0;
+  }
+
+  .main-logo {
+    margin-left: 1rem;
+  }
+}

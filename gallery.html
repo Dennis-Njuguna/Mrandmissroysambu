@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Oswald:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="YOUR_INTEGRITY_HASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="main-logo-container">
+      <img src="logo/usable_logo.png" alt="Logo" class="main-logo">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i> <!-- Font Awesome hamburger icon -->
+    </div>
+
+    <ul class="main-nav" id="main-nav">
+      <li><a href="/index.html" class="nav-link">Home</a></li>
+      <li><a href="/about-us.html" class="nav-link">About Us</a></li>
+      <li><a href="/gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="/contact-us.html" class="nav-link">Contact Us</a></li>
+    </ul>
+  </header>
+
+
+  <div class="sudo">
+    <h1>Relieve your memories through this wonderful photos. Thank you for attending.</h1>
+
+    <div class="gallery" id="gallery"></div>
+  </div>
+  
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('main-nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    const imageCount = 641; // Number of images
+    const galleryDiv = document.getElementById("gallery");
+
+    for (let i = 1; i <= imageCount; i++) {
+      const img = document.createElement("img");
+      img.src = `images/test (${i}).jpg`; // Adjust to your naming
+      img.alt = `Photo ${i}`;
+      img.classList.add("gallery-image"); // Add your styling
+      galleryDiv.appendChild(img);
+    }
+
+  </script>
+</body>
+</html>
