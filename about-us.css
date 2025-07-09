@@ -45,13 +45,14 @@ h4 {
 .main-nav {
   font-family: oswald;
   font-size: 1.1rem;
-  letter-spacing: .02rem;
+  letter-spacing: .03rem;
   width: 40%;
   display: flex;
   justify-content: space-evenly;
   color: gold;
   /* border: 1px solid red; */
   list-style-type: none;
+  padding-top: 1rem;
 }
 .nav-link {
   text-decoration: none;
@@ -221,13 +222,21 @@ li {
   .main-nav {
     display: none;
     position: absolute;
-    top: 70px; /* adjust depending on your header height */
+    top: 80px; /* adjust depending on your header height */
     right: 0;
     background-color: black;
     flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
     width: 100%;
-    text-align: center;
-    padding: 1rem 0;
+    z-index: 10;
+    letter-spacing: .06rem;
+    padding: 1.5rem 0;
+  }
+
+  .nav-link {
+    padding-left: 1.4rem;
   }
 
   .main-nav.active {

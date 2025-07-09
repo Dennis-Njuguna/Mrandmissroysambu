@@ -26,7 +26,11 @@ footer {
 }
 i {
   font-size: 1.75rem;
-  color: rgb(0, 0, 0);
+  color: gold;
+}
+a:link, a:visited {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 .main-header{
   display: flex;
@@ -65,19 +69,19 @@ i {
   /* border: 1px solid red; */
   list-style-type: none;
 }
-.nav-link {
+.nav-link, .nav-link:visited {
   text-decoration: none;
   color: gold;
 }
 .intro {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(images/test\ \(476\).JPG);
+  background-image: linear-gradient(135deg, rgb(38, 106, 78), rgb(31, 168, 152), rgb(0, 229, 250));
+  /* background-image: url(images/test\ \(476\).JPG);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   width: 100%;
   height: 728px;
   overflow: hidden;
@@ -86,16 +90,33 @@ i {
   color: rgb(19, 37, 53);
   text-shadow: 1;
 } */
-.title {
-  background-color: rgb(0, 0, 0);
-  color: rgb(153, 137, 21);
-  padding: 1rem;
+.overlay {
+  position: absolute;
+  top: 97px;
+  left: 0;
+  width: 100%;
+  height: 728px;
+  background: rgba(0, 0, 0, 0.3); /* Adjust opacity here */
+  z-index: 1;
+}
+.intro-info {
+  z-index: 2;
+  width: 50%;
+}
+.title, .slogan {
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  text-align: start;
 }
 .explore-btn {
   background-image: linear-gradient(180deg, black, rgb(70, 70, 70));
   color: gold;
   padding: .75rem 1.75rem;
   border: none;
+}
+.fashion {
+  z-index: 2;
+  height: 600px;
 }
 .more {
   display: flex;
@@ -164,10 +185,10 @@ i {
 .thanks {
   color: aliceblue;
   /* background-color: goldenrod; */
-  background-image: linear-gradient(180deg, #203356, rgb(59, 57, 106));
+  background-image: linear-gradient(180deg, rgb(34, 34, 34), rgb(69, 69, 69), rgb(84, 84, 84));
   padding: 3.5rem 2rem;
-  letter-spacing: .03rem;
-  line-height: 1.5rem;
+  letter-spacing: .05rem;
+  line-height: 1.7rem;
   text-align: center;
   font-size: 1.1rem;
 }
@@ -229,7 +250,7 @@ i {
   justify-content: center;
   align-items: center;
   gap: .6rem;
-  background-color: rgb(205, 181, 0);
+  background-image: linear-gradient(180deg, black, rgb(57, 57, 57));
   padding: 2.15rem 0;
 }
 .contact-type {
@@ -238,6 +259,7 @@ i {
   text-align: center;
   font-family: montserrat;
   font-weight: 600;
+  color: gold;
 }
 .partners {
   border: 1px solid greenyellow;
@@ -272,7 +294,7 @@ i {
 
 @media (max-width: 480px) {
   body {
-    /* overflow: hidden; */
+    overflow-x: hidden;
   }
   footer {
     height: 100%;
@@ -284,23 +306,39 @@ i {
     padding: 3rem 0;
   }
   .intro {
-    background-image: url(images/DSC_1210.JPG);
+    /* background-image: url(images/DSC_1210.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid red;
-    height: 300px;
+    border: 1px solid red; */
+    flex-direction: column-reverse;
+    height: 600px;
   }
-  .title {
-    color: rgb(19, 37, 53);
-    text-shadow: 1;
-    font-size: 1.3rem;
+  .overlay {
+    height: 606px;
+    top: 110px;
+  }
+  .intro-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+  }
+  .fashion {
+    width: 60%;
+    height: 260px;
+  }
+  .title, .slogan {
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
   }
   .slogan {
-    background-color: rgb(0, 0, 0);
-    color: gold;
-    padding: 1rem;
     font-size: 1.3rem;
+    margin-bottom: .5rem;
   }
   .explore-btn {
     background-image: linear-gradient(180deg, black, rgb(70, 70, 70));
@@ -336,6 +374,13 @@ i {
   .thanks {
     text-align: start;
     padding: 3.5rem .9rem;
+    font-size: .95rem;
+    line-height: 1.6rem;
+    letter-spacing: .08rem;
+    font-family: montserrat;
+  }
+  .than {
+    font-size: 1.1rem;
   }
   .highlight-title {
     margin: 4rem 0 1rem 0;
@@ -371,13 +416,21 @@ i {
   .main-nav {
     display: none;
     position: absolute;
-    top: 70px; /* adjust depending on your header height */
+    top: 80px; /* adjust depending on your header height */
     right: 0;
     background-color: black;
     flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
     width: 100%;
-    text-align: center;
-    padding: 1rem 0;
+    z-index: 10;
+    letter-spacing: .06rem;
+    padding: 1.5rem 0;
+  }
+
+  .nav-link {
+    padding-left: 1.4rem;
   }
 
   .main-nav.active {
