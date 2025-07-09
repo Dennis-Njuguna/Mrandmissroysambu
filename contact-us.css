@@ -236,6 +236,9 @@ a:visited {
   }
 }
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .main-nav {
     display: none;
     position: absolute;
